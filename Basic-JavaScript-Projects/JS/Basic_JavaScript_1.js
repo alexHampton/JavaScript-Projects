@@ -21,3 +21,15 @@ function My_First_Function() {
     var result = string.fontcolor("green");
     document.getElementById("green_button").innerHTML = result;
 }
+
+function goAway() {
+    return "Go away!";
+}
+
+function thanks() {
+    return "Thanks...";
+}
+
+function ouch() {
+    return "Ouch!";
+}

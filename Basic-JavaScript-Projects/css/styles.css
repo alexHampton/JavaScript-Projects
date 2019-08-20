@@ -1,0 +1,8 @@
+p {
+    border: solid brown;
+    display: block;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    padding-top: 15px;
+}
