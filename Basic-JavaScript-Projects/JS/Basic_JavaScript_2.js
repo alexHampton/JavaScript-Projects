@@ -20,3 +20,7 @@ function secret() {
 function keep() {
     document.getElementById("secret").innerHTML = "Don't tell anyone...";
 }
+
+function red() {
+    document.getElementById("red").innerHTML = "Go away!";
+}
