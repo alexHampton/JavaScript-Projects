@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+    <p id="concatenation"></p>
+    <p id="slice_sentence"></p>
+    <p id="slice"></p>
+    <p>That same sentence above, but with uppercase looks like this:</p>
+    <p id="uppercase"></p>
+    <p id="search"></p>
+
+    <p id="to_string"></p>
+
+    <p>Input a number with many digits:</p>
+    <input type="text" id="precision_input">
+    <p>Input the amount of digits you want to limit it to:</p>
+    <input type="text" id="precision_limit">    
+    <button onclick="precision_Method()">Click here</button>
+    <p id="precision"></p>
+
+    <br><br>
+    <p>If I want to limit by the number of places after the decimal, I can use toFixed() instead:</p>
+    <p>Input a number with many digits:</p>
+    <input type="text" id="fixed_input">
+    <p>Input the amount of digits <em>after the decimal</em> you want to limit it to:</p>
+    <input type="text" id="fixed_limit">
+    <button onclick="fixed_Method()">Click here</button>
+    <p id="fixed"></p>
+    <script src="Js/Basic_JavaScript_8.js"></script>
+</body>
+</html>
