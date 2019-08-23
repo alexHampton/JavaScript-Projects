@@ -1,0 +1,23 @@
+form {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background: beige;
+    width: 50%;
+    max-width: 400px;
+    margin: 20% auto;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, .8);
+    text-align: center;
+}
+input {
+    margin: 10px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.inputs {
+    width: 50%;
+    min-width: 150px;
+    line-height: 1.2rem;
+    border: 1px solid black;
+    border-radius: 2px;
+}

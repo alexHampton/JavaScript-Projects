@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Form</title>
+    <link rel="stylesheet" href="CSS/CSS_1.css">
+</head>
+<body>
+
+    <form name="myForm" action="" onsubmit="return validateForm()">
+        Please fill out our contact form: <br>
+        <input name="fname" class="inputs" type="text" placeholder="*First name" required><br>
+        <input name="lname" class="inputs" type="text" placeholder="*Last name" required><br>
+        <input name="email" class="inputs" type="email" placeholder="*Email" required><br>
+        <input name="phone" class="inputs" type="tel" placeholder="Phone (000-000-0000)" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"><br>
+        <input type="submit"> *Required
+        
+    </form>
+    
+
+    <script src="JavaScript/JavaScript_2.js"></script>
+</body>
+</html>
