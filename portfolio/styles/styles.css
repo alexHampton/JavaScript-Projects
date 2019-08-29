@@ -1,0 +1,418 @@
+/*------------------------------------------------
+ GENERAL STYLES
+ -----------------------------------------------*/
+* {box-sizing: border-box;}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+/* flexbox used to make slideshow and introduction sections snap into place */
+.flex-container-1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* slideshow and intro sections line up at the bottom of the container*/
+}
+
+/* general styles for all containers */
+.container {
+    width: 100%;
+}
+
+
+/* FONTS */
+.navbar, h1, h2, button {
+    font-family: 'Yeseva One', cursive;
+    text-align: center;
+}
+
+a {
+    color: darkslateblue;
+}
+a:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+
+
+p, .mySlides, input, textarea, label {
+    font-family: 'Concert One', cursive;
+    text-align: center;
+}
+
+input, textarea {
+    text-align: left;
+}
+
+p, h1, h2 {
+    transition: text-shadow .2s;
+}
+
+p:hover, h1:hover, h2:hover {
+    text-shadow: 2px 2px 8px rgba(72, 61, 139, 0.8);
+    z-index: 10;
+}
+
+/*------------------------------------------------
+ NAVBAR SECTION
+ -----------------------------------------------*/
+
+/* flexbox used for navbar */
+.navbar {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: auto;
+    position: fixed;
+    padding: 0;
+    z-index: 1;
+    background-color: white;
+    overflow: hidden;
+
+    animation: slideIn 5s;
+}
+
+@keyframes slideIn {
+    from { transform: translateX(-100vw);}
+    to { transform: translateX(0vw);}
+}
+
+/* styling of navbar links */
+.navbar a {
+    text-transform: uppercase;
+    color: darkslategray;
+    text-decoration: none;
+    padding: 1vh 2vw;
+    font-size: 2vh;
+    transition: background-color .4s;
+    animation: slideDown 4s;
+}
+
+@keyframes slideDown {
+    from { transform: translateY(-50vh);}
+    to { transform: translateY(0vh);}
+}
+
+.navbar a:hover {
+    color: white;
+    background: darkslateblue;
+}
+
+.navbar .active {
+    background-color: darkslateblue;
+    color: white;
+}
+
+
+/*------------------------------------------------
+ FORM SECTION
+ -----------------------------------------------*/
+#myForm {
+    display: none;
+    position: fixed;
+    bottom: 2vh;
+    right: 2vw;
+    background-color: darkslateblue;
+    border: 1px solid darkblue;
+    z-index: 3;
+    padding-bottom: 2vh;
+    width: 30vw;
+    min-width: 300px;
+    padding-top: 1vh;
+    line-height: 3vh;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    border: none;
+    line-height: 3vh;
+}
+
+.formButton {
+    width: 100%;
+    height: 6vh;
+    background: white;
+    border: 2px darkblue solid;
+    margin: 1vh 0;
+}
+
+.formButton:hover {
+    background-color: green;
+    color: white;
+    opacity: 0.8;
+}
+
+#closeButton:hover {
+    background-color: red;
+}
+
+#contactButton {
+    position: fixed;
+    bottom: 2vh;
+    right: 2vw;
+    width: 25vw;
+    max-width: 250px;
+    height: 7vh;
+    z-index: 2;
+    border: solid 1.5px darkslateblue;
+    background: rgba(255, 255, 255, .6);
+    animation: slideInRight 4s;
+}
+
+#contactButton:hover {
+    background-color: rgba(255, 255, 255, 1);
+    cursor: pointer;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+@keyframes slideInRight {
+    from { transform: translateX(200vw)}
+    to { transform: translateX(0vw)}
+}
+
+
+
+form label {
+    color: white;
+}
+
+
+/*------------------------------------------------
+ OVERALL VIDEO SECTION 
+ -----------------------------------------------*/
+.video {
+    padding: 0px;
+    height: 150vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    z-index: 10;
+
+}
+
+#backgroundVideo {
+    position: fixed;
+    z-index: -5;
+}
+
+/* INTRO SECTION WITHIN VIDEO SECTION */
+#introduction {
+    height: 50vh;
+    padding: 5vh 5vw 0 5vw;
+    background-color: rgba(72, 61, 139, 0.4);
+    animation: slideDownFar 4s;
+    color: white;
+}
+
+@keyframes slideDownFar {
+    from { transform: translateY(-100vh)}
+    to { transform: translateY(0vh)}
+}
+
+/* SLIDESHOW SECTION WITHIN VIDEO SECTION */
+#slideshow {
+    height: 60vh;
+    padding-top: 5vh;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.slideshow-container {
+    height: 40vh;
+    width: 40vh;
+    position: relative;
+    margin:  10px auto;
+}
+
+/* Images are hidden by default */
+.mySlides {
+    display: none;
+}
+
+.mySlides > img {
+    width: 100%;
+    border-radius: 20px;
+    transition: transform ease-in-out .5s, box-shadow ease-in .5s;
+    filter: grayscale(90%);
+    box-shadow: 4px 4px 4px black;
+}
+
+.mySlides > img:hover {
+    transform: scale(1.2);
+    filter: grayscale(0);
+    box-shadow: 4px 4px 10px 2px rgba(0, 0, 0, 0.8);
+}
+
+/* Next and Previous buttons */
+.ss-prev,
+.ss-next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+/* Alter the Next button position */
+.ss-next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.ss-prev:hover,
+.ss-next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Caption Text */
+.ss-text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+    text-shadow: 2px 1px 4px black;
+}
+
+/* Number text */
+.ss-numberText {
+    display: none;
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+.dot-container {
+    text-align: center;
+}
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+    background-color: #717171;
+}
+
+/* Fading Animation */
+.ss-fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from { opacity: .4 }
+    to { opacity: 1 }
+}
+
+@keyframes fade {
+    from{ opacity: .4 }
+    to { opacity: 1 }
+}
+
+
+
+
+/* FLEX ABOUT/GITHUB CONTAINERS */
+.flex-container-2 {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding: 0;
+}
+
+.flex-container-2 > .container {
+    flex: 50%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.image > div >img {
+    height: 50vh;
+    margin: 0 auto;
+    border-radius: 10px;
+    transition: transform .5s ease-in-out, box-shadow ease-in .5s;
+    box-shadow: 4px 4px 4px black;
+}
+
+.image {
+    overflow: hidden;
+}
+
+.image > div > img:hover {
+    transform: scale(1.5);
+    box-shadow: 4px 4px 10px 2px rgba(0, 0, 0, 0.8);
+}
+
+.image {
+    background-color: darkslateblue;
+}
+
+.about, .github, footer {
+    background-color: white;
+}
+
+
+/* FOOTER */
+.footer {
+    height: 15vh;
+    margin-top: -20px;
+    padding-top: 15px;
+}
+
+
+
+
+
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 735px) {
+    .flex-container-2 {
+        flex-direction: column;
+    }
+    .flex-container-2 > .container {
+        flex:100%;
+    }
+}
+
+@media screen and (max-width: 520px) {
+    #introduction, .footer {
+        height: auto;
+    }
+}
