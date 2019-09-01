@@ -204,6 +204,7 @@ form label {
 #backgroundVideo {
     position: fixed;
     z-index: -5;
+    top: -10px;
 }
 
 /* INTRO SECTION WITHIN VIDEO SECTION */
