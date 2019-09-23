@@ -292,7 +292,20 @@ form label {
     bottom: 8px;
     width: 100%;
     text-align: center;
-    text-shadow: 2px 1px 4px black;
+    text-shadow: 0 0 3px black, 0 0 3px black,
+                 0 0 3px black, 0 0 3px black,
+                 0 0 3px black, 0 0 3px black,
+                 0 0 3px black, 0 0 3px black;   
+}
+
+.ss-text a {
+    text-shadow: 0 0 3px white, 0 0 3px white,
+                 0 0 3px white, 0 0 3px white,
+                 0 0 3px white, 0 0 3px white,
+                 0 0 3px white, 0 0 3px white;
+}
+
+#ss-text-2 {
 }
 
 /* Number text */
