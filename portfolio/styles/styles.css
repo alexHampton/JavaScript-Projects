@@ -195,6 +195,7 @@ form label {
 .video {
     padding: 0px;
     height: 150vh;
+    width: 100%;
     background-color: rgba(0, 0, 0, 0.5);
     overflow: hidden;
     z-index: 10;
