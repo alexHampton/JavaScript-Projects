@@ -1,6 +1,0 @@
-[submodule "AJAX"]
-	path = AJAX
-	url = https://github.com/alexHampton/AJAX
-[submodule "jQuery"]
-	path = jQuery
-	url = https://github.com/alexHampton/jQuery
