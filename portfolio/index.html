@@ -7,18 +7,21 @@
 
     <link rel="stylesheet" href="styles/styles.css">
     <link href="https://fonts.googleapis.com/css?family=Concert+One|Yeseva+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Alex Hampton</title>
 </head>
 <body>
 
     
         <!-- NAVBAR -->
-        <nav class="navbar container">
-            <a href="#home" class="active">Home</a>
+        <nav id="navbar" class="navbar container">
+            <a id="homeButton" href="#home" class="active">Home</a>
             <a href="#slideshow">Slideshow</a>
             <a href="#about">About</a>
             <a href="#github">GitHub</a>
             <a onclick="openForm()">Contact</a>
+            <a href="javascript:void(0);" class="icon" onclick="navOpenClose()">
+                <i class="fa fa-bars"></i></a>
 
 
         </nav>
@@ -73,21 +76,21 @@
                     <div class="mySlides ss-fade">
                         <div class="ss-numberText">1 / #</div>
                         <img src="images/portfolio.jpeg" alt="">
-                        <div class="ss-text" id="ss-text-1">The various things I am learning include: </div>
+                        <div class="ss-text" id="ss-text-1">The various technologies that I use include: </div>
                     </div>
 
                     <!-- Slide 2 -->
                     <div class="mySlides ss-fade">
                         <div class="ss-numberText">2 / #</div>
                         <img src="images/HTML_CSS_and_JavaScript.jpg" alt="HTML, CSS, and JavaScript">
-                        <div class="ss-text" id="ss-text-2">Development of websites using<br>HTML, CSS, and JavaScript, </div>
+                        <div class="ss-text" id="ss-text-2">HTML, CSS, and JavaScript, </div>
                     </div>
 
                     <!-- Slide 3 -->
                     <div class="mySlides ss-fade">
                         <div class="ss-numberText">3 / #</div>
                         <img src="images/GitHub.jpg" alt="GitHub">
-                        <div class="ss-text" id="ss-text-3">The use of Git <br>in conjunction with GitHub, </div>
+                        <div class="ss-text" id="ss-text-3">Git and GitHub, </div>
                     </div>
 
                     <!-- Slide 4 -->
@@ -177,9 +180,13 @@
         <!-- GITHUB -->
         <section class="github container" id="github">
             <h2>GitHub</h2>
-            <p>See some of my work on my GitHub account here:</p>
+            <p>Check out some of my work:</p>
+            <p><a href="https://github.com/alexHampton/Live-Project-Summary" target="_isblank">Live Project Summary</a></p>
+            <p><a href="https://github.com/alexHampton/The-Tech-Academy-C-Sharp-Coding-Projects/tree/master/BNB">Bed and Breakfast with CRUD capabilities</a></p>
+            <p><a href="https://github.com/alexHampton/The-Tech-Academy-SQL-Coding-Projects">MySQL database creation and Stored Procedures</a></p>
+            <p>See more on my GitHub account here:</p>
             <br>
-            <p><a href="https://github.com/alexHampton" target="_isblank">github.com/alexHampton</a></p>
+            <p><a href="https://github.com/alexHampton" target="_isblank">My GitHub Account.</a></p>
 
         </section>
         <!-- END GITHUB -->

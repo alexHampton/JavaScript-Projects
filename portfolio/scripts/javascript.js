@@ -1,4 +1,18 @@
 //-------------------------------------------------------------------
+// NAVBAR
+//-------------------------------------------------------------------
+function navOpenClose() {
+    var x = document.getElementById("navbar");
+    if (x.className === "navbar container") {
+        x.className += " responsive";
+        var y = document.getElementById("homeButton");
+        y.style = "animation:none;"
+    } else {
+        x.className = "navbar container";
+    }
+}
+
+//-------------------------------------------------------------------
 // SLIDESHOW
 //-------------------------------------------------------------------
 
