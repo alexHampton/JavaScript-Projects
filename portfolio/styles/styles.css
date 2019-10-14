@@ -24,6 +24,7 @@ body {
 /* general styles for all containers */
 .container {
     width: 100%;
+
 }
 
 
@@ -71,26 +72,31 @@ p:hover, h1:hover, h2:hover {
     flex-wrap: wrap;
     width: 100%;
     height: auto;
+    min-height: 6vh;
     position: fixed;
     padding: 0;
     z-index: 1;
     background-color: white;
     overflow: hidden;
+    line-height: 6vh;
 
     animation: slideIn 5s;
 }
 
-@keyframes slideIn {
+/* @keyframes slideIn {
     from { transform: translateX(-100vw);}
     to { transform: translateX(0vw);}
-}
+} */
 
 /* styling of navbar links */
 .navbar a {
     text-transform: uppercase;
     color: darkslategray;
     text-decoration: none;
-    padding: 1vh 2vw;
+    padding-right: 2vw;
+    padding-left: 2vw;
+    padding-top: auto;
+    padding-bottom: auto;
     font-size: 2vh;
     transition: background-color .4s;
 }
@@ -98,10 +104,10 @@ p:hover, h1:hover, h2:hover {
     animation: slideDown 4s;
 }
 
-@keyframes slideDown {
+/* @keyframes slideDown {
     from { transform: translateY(-50vh);}
     to { transform: translateY(0vh);}
-}
+} */
 
 .navbar a:hover {
     color: white;
@@ -128,7 +134,7 @@ p:hover, h1:hover, h2:hover {
     background-color: darkslateblue;
     border: 1px solid darkblue;
     z-index: 3;
-    padding-bottom: 2vh;
+    padding: 2vh .5%;
     width: 30vw;
     min-width: 300px;
     padding-top: 1vh;
@@ -139,7 +145,7 @@ form input,
 form textarea {
     width: 100%;
     border: none;
-    line-height: 3vh;
+    line-height: 5vh;
 }
 
 .formButton {
@@ -199,7 +205,7 @@ form label {
  -----------------------------------------------*/
 .video {
     padding: 0px;
-    height: 150vh;
+    height: 160vh;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.5);
     overflow: hidden;
@@ -230,13 +236,16 @@ form label {
 /* SLIDESHOW SECTION WITHIN VIDEO SECTION */
 #slideshow {
     height: 60vh;
-    padding-top: 5vh;
+    padding-top: 2vh;
+    overflow: hidden;
     background-color: rgba(255, 255, 255, 0.3);
 }
 
 .slideshow-container {
-    height: 40vh;
-    width: 40vh;
+    height: 50vh;
+    width: 50vh;
+    max-width: 90vw; /* On small screens, slideshow won't be biger than the screen width. */
+    max-height: 90vw; /* Makes sure slideshow stays square on small screens */
     position: relative;
     margin:  10px auto;
 }
@@ -255,7 +264,7 @@ form label {
 }
 
 .mySlides > img:hover {
-    transform: scale(1.2);
+    transform: scale(1.1);
     filter: grayscale(0);
     box-shadow: 4px 4px 10px 2px rgba(0, 0, 0, 0.8);
 }
@@ -286,6 +295,7 @@ form label {
 .ss-prev:hover,
 .ss-next:hover {
     background-color: rgba(0, 0, 0, 0.8);
+    text-decoration: none;
 }
 
 /* Caption Text */
@@ -433,6 +443,9 @@ form label {
     }
     .flex-container-2 > .container {
         flex:100%;
+    }
+    .navbar {
+        line-height: 10vh;
     }
 }
 
