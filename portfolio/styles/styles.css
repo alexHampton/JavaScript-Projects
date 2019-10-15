@@ -233,7 +233,9 @@ form label {
     to { transform: translateY(0vh)}
 }
 
-/* SLIDESHOW SECTION WITHIN VIDEO SECTION */
+/******************************************
+ * SLIDESHOW SECTION WITHIN VIDEO SECTION * 
+ ******************************************/
 #slideshow {
     height: 100vh;
     padding-top: 2vh;
@@ -316,7 +318,7 @@ form label {
                  0 0 3px black, 0 0 3px black;   
 }
 
-.ss-text a {
+.ss-text a, .photo-overlay > h2 > a {
     text-shadow: 0 0 3px white, 0 0 3px white,
                  0 0 3px white, 0 0 3px white,
                  0 0 3px white, 0 0 3px white,
@@ -376,7 +378,9 @@ form label {
 
 
 
-/* FLEX ABOUT/GITHUB CONTAINERS */
+/********************************
+ * FLEX ABOUT/GITHUB CONTAINERS *
+ ********************************/
 .flex-container-2 {
     display: flex;
     flex-wrap: wrap;
@@ -396,6 +400,34 @@ form label {
     padding-left: 20px;
 }
 
+.image > div >img {
+    height: 50vh;
+    margin: 0 auto;
+    border-radius: 10px;
+    transition: transform .5s ease-in-out, box-shadow ease-in .5s;
+    box-shadow: 4px 4px 4px black;
+}
+
+.image {
+    overflow: hidden;
+}
+
+.image > div > img:hover {
+    transform: scale(1.5);
+    box-shadow: 4px 4px 10px 2px rgba(0, 0, 0, 0.8);
+}
+
+.image {
+    background-color: darkslateblue;
+}
+
+.about, .github, footer {
+    background-color: white;
+}
+
+/******************* 
+ *PROJECTS SECTION *
+ *******************/
 .flex-container-2 > .projects {
     flex: 100%;
     min-height: 100vh;
@@ -435,33 +467,34 @@ form label {
     height: 100%;
 }
 
-.image > div >img {
-    height: 50vh;
-    margin: 0 auto;
-    border-radius: 10px;
-    transition: transform .5s ease-in-out, box-shadow ease-in .5s;
-    box-shadow: 4px 4px 4px black;
+/* PROJECTS OVERLAY */
+
+.photo-overlay {
+    opacity: 0;
+    color:#fff;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding-top: 40%;
+    padding-left: 30px;
+    padding-right: 30px;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0,0,0,0.5);
+    transition: opacity 0.4s;
 }
 
-.image {
-    overflow: hidden;
-}
-
-.image > div > img:hover {
-    transform: scale(1.5);
-    box-shadow: 4px 4px 10px 2px rgba(0, 0, 0, 0.8);
-}
-
-.image {
-    background-color: darkslateblue;
-}
-
-.about, .github, footer {
-    background-color: white;
+.photo-overlay:hover {
+    opacity: 1;
 }
 
 
-/* FOOTER */
+
+/****************************** 
+ *    FOOTER                  *
+ ******************************/
 .footer {
     height: 20vh;
     margin-top: -20px;
