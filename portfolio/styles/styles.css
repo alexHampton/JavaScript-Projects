@@ -83,10 +83,10 @@ p:hover, h1:hover, h2:hover {
     animation: slideIn 5s;
 }
 
-/* @keyframes slideIn {
+@keyframes slideIn {
     from { transform: translateX(-100vw);}
     to { transform: translateX(0vw);}
-} */
+}
 
 /* styling of navbar links */
 .navbar a {
@@ -104,10 +104,10 @@ p:hover, h1:hover, h2:hover {
     animation: slideDown 4s;
 }
 
-/* @keyframes slideDown {
+@keyframes slideDown {
     from { transform: translateY(-50vh);}
     to { transform: translateY(0vh);}
-} */
+}
 
 .navbar a:hover {
     color: white;
