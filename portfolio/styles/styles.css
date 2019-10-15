@@ -320,6 +320,10 @@ form label {
                  0 0 3px white, 0 0 3px white;
 }
 
+#ss-text-6 {
+    bottom: 45%;
+}
+
 /* Number text */
 .ss-numberText {
     display: none;
